@@ -1,11 +1,12 @@
 class advBottle:
-  def __init__(self, clr, bnd, cap, rad, hgt):
+  def __init__(self, clr, bnd, cap, rad, hgt, b):
     self.__color = clr
     self.__brand = bnd
     self.__capacity = cap
     self.__radius = rad
     self.__height = hgt
     self.__pi = 3.141592
+    self.__B = b
   def showPi(self):
     return self.__pi
   def getColor(self):
@@ -19,10 +20,14 @@ class advBottle:
     return self.__capacity
   def showBr(self):
     return self.__brand
+  def showB(self):
+    return self.__B
+  def setB(self , b):
+    self.__B =b
 
-firstBottle = advBottle("Red", "Avian", 700, 5, 10)
-secondBottle = advBottle("Blue", "Avian", 700, 5, 10)
-thirdBottle = advBottle("Red", "Avian", 500, 5, 10)
+firstBottle = advBottle("Red", "Avian", 700, 5, 10 , 500)
+secondBottle = advBottle("Blue", "Avian", 700, 5, 10 ,100)
+thirdBottle = advBottle("Red", "Avian", 500, 5, 10 ,200)
 print(firstBottle.getColor())
 secondBottle.setColor("Pink")
 print(thirdBottle.getColor())
@@ -30,3 +35,6 @@ print(firstBottle.getCapacity())
 firstBottle.setHeight(2)
 print(firstBottle.getCapacity())
 print(firstBottle.showBr())
+print(firstBottle.showB())
+firstBottle.setB(300)
+print(firstBottle.showB())
